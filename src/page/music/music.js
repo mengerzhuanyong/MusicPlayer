@@ -4,13 +4,16 @@
  * @大梦
  */
 
+
 'use strict';
+
 import React, {Component} from 'react'
 import {
     View,
     Text,
-    StyleSheet,
+    StyleSheet, Image, TouchableOpacity, Slider,
 } from 'react-native'
+import NavigationBar from "../../component/system/NavigationBar";
 
 export default class Music extends Component {
 
@@ -18,14 +21,22 @@ export default class Music extends Component {
         super(props);
     }
 
-    componentDidMount() {};
+    componentDidMount() {
+    };
 
-    componentWillUnmount() {};
+    componentWillUnmount() {
+    };
 
     render() {
         return (
             <View style={styles.container}>
-                <Text style={styles.textStyle}>Music</Text>
+
+                <TouchableOpacity
+                    style={styles.controlButtonItem}
+                    onPress={() => RouterHelper.navigate('Music Player', 'MusicPlayer')}
+                >
+                    <Text style={styles.textStyle}>音乐播放器</Text>
+                </TouchableOpacity>
             </View>
         );
     }
@@ -38,8 +49,16 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         backgroundColor: '#f60',
     },
+    controlButtonItem: {
+        width: 200,
+        height: 50,
+        borderRadius: 5,
+        backgroundColor: '#f60',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
     textStyle: {
         fontSize: 16,
         color: '#fff',
-    }
+    },
 });

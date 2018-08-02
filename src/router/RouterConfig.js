@@ -21,6 +21,8 @@ import Login from '../page/login/login'
 import Register from '../page/login/register'
 import RetrievePassword from '../page/login/retrievePassword'
 
+import MusicPlayer from '../page/music/musicPlayer'
+
 import Setting from '../page/system/setting'
 import SystemMessage from '../page/system/systemMessage'
 
@@ -76,11 +78,13 @@ const StackNavigator = createStackNavigator(configRouter({
     Register: {screen: Register},
     RetrievePassword: {screen: RetrievePassword},
 
+    MusicPlayer: {screen: MusicPlayer},
+
     Setting: {screen: Setting},
     SystemMessage: {screen: SystemMessage},
 
 }), {
-    initialRouteName: 'Tab',
+    initialRouteName: 'MusicPlayer',
     cardStyle: {
         shadowOpacity: 0,
         shadowRadius: 0,

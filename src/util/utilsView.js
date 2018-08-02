@@ -18,47 +18,6 @@ import {
 
 export default class UtilsView {
 
-
-    /**
-     * 获取设置页的Item
-     * @Author   Menger
-     * @DateTime 2018-01-17
-     * @param callBack 单击item的回调
-     * @param icon 左侧图标
-     * @param text 显示的文本
-     * @param tintStyle 图标着色
-     * @param expandableIco 右侧图标
-     * @return {XML}
-     */
-    static getSettingItem(callBack, icon, text, tintStyle, expandableIco) {
-        return (
-            <TouchableHighlight
-                onPress={callBack}
-            >
-                <View style={[styles.setting_item_container]}>
-                    <View style={{alignItems: 'center', flexDirection: 'row'}}>
-                        {icon ?
-                            <Image source={icon} style={[{
-                                opacity: 1,
-                                width: 16,
-                                height: 16,
-                                marginRight: 10,
-                                resizeMode: 'stretch'
-                            }, tintStyle]}/>
-                            :
-                            <View style={{opacity: 1, width: 16, height: 16, marginRight: 10,}}/>
-                        }
-                        <Text>{text}</Text>
-                    </View>
-                    <Image
-                        source={expandableIco ? expandableIco : Images.icon_arrow_left}
-                        style={[styles.settingBtnIcon, tintStyle]}
-                    />
-                </View>
-            </TouchableHighlight>
-        )
-    }
-
     /**
      * 左侧导航按钮
      * @Author   Menger
@@ -96,53 +55,13 @@ export default class UtilsView {
             </TouchableOpacity>
         )
     };
-
-    /**
-     * 获取更多按钮
-     * @Author   Menger
-     * @DateTime 2018-01-17
-     * @param callBack
-     * @returns {XML}
-     */
-    static getMoreButton = (callBack) => {
-        return (
-            <TouchableHighlight
-                ref="moreMenuButton"
-                style={{padding: 5}}
-                onPress={callBack}
-                underlayColor={'transparent'}
-            >
-                <View style={{paddingRight: 8}}>
-                    <Image style={styles.moreMenuBtnIcon} source={Images.icon_arrow_left}/>
-                </View>
-            </TouchableHighlight>
-        )
-    };
-
-    /**
-     * 获取分享按钮
-     * @Author   Menger
-     * @DateTime 2018-01-17
-     * @param callBack
-     * @returns {XML}
-     */
-    static getShareButton = (callBack) => {
-        return (
-            <TouchableHighlight
-                onPress={callBack}
-                underlayColor={'transparent'}
-            >
-                <Image style={styles.shareBtnIcon} source={Images.icon_arrow_left}/>
-            </TouchableHighlight>
-        )
-    };
 };
 
 const styles = StyleSheet.create({
     headIcon: {
         width: 24,
         height: 24,
-        tintColor: '#333',
+        tintColor: '#fff',
         resizeMode: 'contain',
     },
     setting_item_container: {

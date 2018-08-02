@@ -42,6 +42,12 @@ const GlobalStyle = {
     transparent: 0,
 
     overNavigationBar: __IOS__ ? -64 : 70,
+    toastStyle: {
+        backgroundColor: '#454545'
+    },
+    toastTextStyle: {
+        color: '#fff',
+    },
 
     f_w4: {
         fontWeight: '400'

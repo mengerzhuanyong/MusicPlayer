@@ -71,7 +71,7 @@ export default class NavigationBar extends Component {
 
     static defaultProps = {
         statusBar: {
-            barStyle: 'dark-content',
+            barStyle: 'light-content',
             hidden: false,
             translucent: false,
             animated: false,
@@ -235,8 +235,8 @@ class NavBarButton extends Component {
 const styles = StyleSheet.create({
     container: {
         zIndex: 999,
-        // backgroundColor: 'transparent',
-        backgroundColor: '#fff',
+        backgroundColor: 'transparent',
+        // backgroundColor: '#fff',
     },
     navBar: {
         flexDirection: 'row',
@@ -255,7 +255,7 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: 18,
-        color: '#333',
+        color: '#fff',
     },
     navButton: {
         flexDirection: 'row',
@@ -267,7 +267,7 @@ const styles = StyleSheet.create({
     },
     navBtnTitle: {
         fontSize: 16,
-        color: '#333',
+        color: '#fff',
         marginLeft: 10,
     },
     statusBar: {
