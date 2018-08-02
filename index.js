@@ -1,4 +1,8 @@
-/** @format */
+/**
+ * 音乐播放器 - AppRegister
+ * https://menger.me
+ * @大梦
+ */
 
 import {AppRegistry} from 'react-native';
 import App from './App';
